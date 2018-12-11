@@ -1,0 +1,9 @@
+IR EX 2
+
+2.2
+ Create Table
+
+ CREATE TABLE docs(did INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, url TEXT);
+ CREATE TABLE tfs(did INTEGER PRIMARY KEY, term TEXT, tf REAL);
+
+ insert into docs (title, url) values ('Test','');
