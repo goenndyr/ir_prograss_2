@@ -1,5 +1,13 @@
 IR_EX_2
 
+2.1
+
+sqlite> .version
+SQLite 3.22.0 2018-01-22 18:45:57 0c55d179733b46d8d0ba4d88e01a25e10677046ee3da1d5b1581e86726f2alt1
+zlib version 1.2.11
+gcc-7.2.0
+
+
 2.2
  Create Table
 
@@ -7,3 +15,6 @@ IR_EX_2
  CREATE TABLE tfs(did INTEGER PRIMARY KEY, term TEXT, tf REAL);
 
  insert into docs (title, url) values ('Test','');
+
+ 2.3
+    first point on the list already implemented ?!
