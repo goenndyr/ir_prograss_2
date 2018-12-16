@@ -14,7 +14,7 @@ gcc-7.2.0
  CREATE TABLE docs(did INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, url TEXT);
  CREATE TABLE tfs(did INTEGER PRIMARY KEY, term TEXT, tf REAL);
 
- insert into docs (title, url) values ('Test','');
+ ## example insert into docs (title, url) values ('Test','http://www.xyz.com');
 
  2.3
     first point on the list already implemented ?!
