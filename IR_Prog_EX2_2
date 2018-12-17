@@ -12,9 +12,16 @@ gcc-7.2.0
  Create Table
 
  CREATE TABLE docs(did INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, url TEXT);
- CREATE TABLE tfs(did INTEGER PRIMARY KEY, term TEXT, tf REAL);
+ CREATE TABLE tfs(did INTEGER, term TEXT, tf INTEGER);
 
  ## example insert into docs (title, url) values ('Test','http://www.xyz.com');
 
  2.3
     first point on the list already implemented ?!
+	
+ 2.4
+	CREATE TABLE dls AS SELECT did, SUM(tf) AS len FROM tfs GROUP BY did;
+	
+	CREATE TABLE dfs AS SELECT term, COUNT(did) AS df FROM tfs GROUP BY term;
+	
+	CREATE TABLE d AS SELECT COUNT(*) as size FROM docs;
