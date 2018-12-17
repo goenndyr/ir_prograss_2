@@ -45,7 +45,6 @@ public class Importer {
             
             for(File file: files) {
             	Document doc = parser.parse(file);
-    			System.out.println(doc.getId());
     			
     			//Insert into docs
     			insertIntoDocs.setLong(1, doc.getId());
@@ -73,7 +72,6 @@ public class Importer {
                 }
     			
     			if(++i % 10 == 0) {
-    				System.out.println("i: " + i);
     				insertIntoDocs.executeBatch();
     				insertIntoTfs.executeBatch();
     			}
@@ -83,6 +81,8 @@ public class Importer {
             	insertIntoDocs.executeBatch();
     			insertIntoTfs.executeBatch();
             }
+            
+            System.out.println("import successfully finished!");
             
             String dls = "CREATE TABLE dls AS SELECT did, SUM(tf) AS len FROM tfs GROUP BY did;";
             PreparedStatement createDls = conn.prepareStatement(dls);
