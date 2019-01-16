@@ -1,0 +1,5 @@
+CREATE INDEX tfs_term_did_tf ON tfs(term, did, tf);
+
+CREATE INDEX dfs_term_df ON dfs(term, df);
+
+CREATE INDEX docs_did_title_url ON docs(did, title, url);
